@@ -55,6 +55,8 @@ The processed data is then written to Elasticsearch. The writeStream operation i
 
 ## Creating the API Recommendation (Flask) :
 
+<img width="390" alt="Capture d'écran 2023-11-14 225229" src="https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/327c0b70-0c64-42b2-a689-a44dc529de66">
+
 ## les difficultés rencontrées :
 
 ## Conclusion :
