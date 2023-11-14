@@ -8,7 +8,7 @@ from kafka import KafkaProducer
 def serializer(message):
     return json.dumps(message).encode('utf-8')
 
-# Kafka Producer
+# Kafka Producer :
 producer = KafkaProducer(
     bootstrap_servers=['localhost:9092'],
     value_serializer=serializer
@@ -30,7 +30,7 @@ if __name__ == '__main__':
         if movies is not None:
             for result in movies["results"] :
                 id_to_genre(result,dict_ids)
-                time.sleep(2)
+                time.sleep(3)
 
                 # Send the data to the 'movies' topic:
                 print(f'Producing message @ {datetime.now()} | Message = {str(result["original_title"])}')

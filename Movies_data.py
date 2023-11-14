@@ -2,8 +2,6 @@ import requests
 import json
 import time
 
-
-
 ############################## id to genre ################################
 def id_to_genre(movie,dict_id) :
     names = []
@@ -35,4 +33,15 @@ def get_movies(page):
     response = requests.get(MOVIE_ENDPOINT.format(API_KEY,page))
     return  response.json()
 
-# print(get_movies(1))
+
+dict_ids = get_genre()
+movies  = get_movies(1)
+
+
+for result in movies["results"] :
+    id_to_genre(result,dict_ids)
+    print(result)
+    # save to file json :
+    with open('json_files/movies.json', 'a') as outfile:
+        json.dump(result, outfile)
+        outfile.write('\n')
