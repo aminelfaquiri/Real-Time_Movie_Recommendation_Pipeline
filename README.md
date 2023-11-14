@@ -33,7 +33,7 @@ first i need to run :
 and i create a topic call "movies"
 
 ## Create a Kafka Producer :
-This Python script serves as the Kafka producer component in the Real-Time Movie Recommendation Pipeline. Its primary function is to collect movie data from the movielens.org API and send it to a Kafka topic named "movies."
+i create Python script serves as the Kafka producer component in the Real-Time Movie Recommendation Pipeline. Its primary function is to collect movie data from the movielens.org API and send it to a Kafka topic named "movies."
 
 ## Create SparkStreaming Traitement Consumer :
 in create a script spark streeming by using python to get data from a producer kafka :
