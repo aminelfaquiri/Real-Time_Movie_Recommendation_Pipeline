@@ -39,25 +39,31 @@ i create Python script serves as the Kafka producer component in the Real-Time M
 in create a script spark streeming by using python to get data from a producer kafka :
 1. **Spark Session Creation:**
 A Spark session is created to interact with Spark Streaming and Spark SQL. Necessary configurations and package dependencies, including those for Kafka and Elasticsearch, are specified.
-2. **Define Schema for Movies Data:**
+
+3. **Define Schema for Movies Data:**
 The schema for the movies data is defined to ensure proper parsing of the incoming data from Kafka.
-3. **Read Data from Kafka:**
+
+5. **Read Data from Kafka:**
 Spark Streaming is configured to read data from the "movies" Kafka topic.
-4. **Deserialize and Parse Data:**
+
+7. **Deserialize and Parse Data:**
 The received data is deserialized and parsed into a structured format using the defined schema.
-5. **Write Stream to Elasticsearch:**
+
+9. **Write Stream to Elasticsearch:**
 The processed data is then written to Elasticsearch. The writeStream operation is used to append the data to the Elasticsearch index named "movies."
 <img width="960" alt="image" src="https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/5abc0b19-98c4-4149-8307-39bd12080297">
-
-## Save data into Elasticsearch :
 
 ## Visualization with Kibana :
 
 ## Creating the API Recommendation (Flask) :
+the get_movie_recommendations function acts as the core logic for handling movie recommendation requests. It interacts with Elasticsearch to retrieve information about the specified movie and formulates additional queries to find and extract relevant movie recommendations.
+
+* **logic of my recomandation**
+i use the simple logic is the 
 
 <img width="390" alt="Capture d'écran 2023-11-14 225229" src="https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/327c0b70-0c64-42b2-a689-a44dc529de66">
 
 ## les difficultés rencontrées :
-
+* probleme the version between elasticsearch and spark and scala.
 ## Conclusion :
 
