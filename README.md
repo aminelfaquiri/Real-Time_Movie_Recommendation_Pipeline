@@ -26,11 +26,11 @@ Crafting dashboards in Kibana for visualizations that aid decision-making. Examp
 look in the pdf file in repo files.
 
 ## Creating a Kafka Topic :
-first i need to run : 
-**_ run  ZooKeeper**
-**_ run Kafka Server**
+Initiate ZooKeeper by running: `_run ZooKeeper_`
+Launch the Kafka Server with the command: `_run Kafka Server_`
 
-and i create a topic call "movies"
+Once the above steps are completed, I create a topic named "movies"
+`kafka-topics --bootstrap-server 127.0.0.1:9092 --topic movies --create --partitions 3 --replication-factor 1`
 
 ## Create a Kafka Producer :
 i create Python script serves as the Kafka producer component in the Real-Time Movie Recommendation Pipeline. Its primary function is to collect movie data from the movielens.org API and send it to a Kafka topic named "movies."
