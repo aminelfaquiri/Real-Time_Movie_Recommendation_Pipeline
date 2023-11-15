@@ -37,15 +37,15 @@ i create Python script serves as the Kafka producer component in the Real-Time M
 
 ## Create SparkStreaming Traitement Consumer :
 in create a script spark streeming by using python to get data from a producer kafka :
-**Spark Session Creation:**
+1. **Spark Session Creation:**
 A Spark session is created to interact with Spark Streaming and Spark SQL. Necessary configurations and package dependencies, including those for Kafka and Elasticsearch, are specified.
-**Define Schema for Movies Data:**
+2. **Define Schema for Movies Data:**
 The schema for the movies data is defined to ensure proper parsing of the incoming data from Kafka.
-**Read Data from Kafka:**
+3. **Read Data from Kafka:**
 Spark Streaming is configured to read data from the "movies" Kafka topic.
-**Deserialize and Parse Data:**
+4. **Deserialize and Parse Data:**
 The received data is deserialized and parsed into a structured format using the defined schema.
-**Write Stream to Elasticsearch:**
+5. **Write Stream to Elasticsearch:**
 The processed data is then written to Elasticsearch. The writeStream operation is used to append the data to the Elasticsearch index named "movies."
 <img width="960" alt="image" src="https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/5abc0b19-98c4-4149-8307-39bd12080297">
 
