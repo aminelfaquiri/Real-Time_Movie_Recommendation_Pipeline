@@ -11,7 +11,7 @@ es = Elasticsearch(['http://localhost:9200'])
 
 
 def get_movie_recommendations(title):
-    # Elasticsearch query to find a movie by title
+    # Elasticsearch query to find a movie by title :
     query = {
         "query": {
             "match": {
@@ -22,8 +22,8 @@ def get_movie_recommendations(title):
 
     response = es.search(index='movies', body=query)
 
-    # Extract movie information from the response
-    if response['hits']['total']['value'] > 0:
+    # Extract movie information from the response 
+    if response['hits']['total']['value'] > 0 :
         movie_info = response['hits']['hits'][0]['_source']
 
         # Retrieve recommendations based on similar genres and high vote_average
@@ -37,6 +37,7 @@ def get_movie_recommendations(title):
                     "must_not": [
                         {"match": {"title": title}}
                     ],
+
                     "filter": [
                         {"terms": {"genre_ids": genre_ids}},
                         {"range": {"vote_average": {"gte": vote_average}}}
@@ -51,7 +52,8 @@ def get_movie_recommendations(title):
         # Extract movie recommendations from the response
         recommendations = [hit['_source']['title'] for hit in recommendation_response['hits']['hits']]
 
-        return {'title': title, 'movie_info': movie_info, 'recommendations': recommendations}
+        return {'recommendations': recommendations,'title': title}
+        return {'title': title,'movie_info': movie_info,'recommendations': recommendations}
     else:
         return None
 

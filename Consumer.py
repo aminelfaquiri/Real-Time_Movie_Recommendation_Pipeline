@@ -4,9 +4,6 @@ from pyspark.sql.types import *
 from elasticsearch import Elasticsearch
 
 
-# Connection of Elasticsearch :
-es = Elasticsearch("http://localhost:9200")
-
 # Create spark session :
 spark = SparkSession.builder \
     .appName("Movies_consumer") \
@@ -21,19 +18,21 @@ schema = StructType([
     StructField("backdrop_path", StringType()),
     StructField("genre_ids", ArrayType(IntegerType())),
     StructField("original_language", StringType()),
-    # StructField("original_title", StringType()),
+    StructField("original_title", StringType()),
     StructField("overview", StringType()),
-    # StructField("popularity", FloatType()),
-    StructField("popularity", DecimalType(5, 1)),
+    StructField("popularity", FloatType()),
     StructField("poster_path", StringType()),
+    # StructField("release_date", DateType()),
     StructField("release_date", DateType()),
+
+    # StructField("release_date", date_format("release_date", "yyyy-MM-dd"), DateType()),
     StructField("title", StringType()),
     StructField("video", BooleanType()),
-    # StructField("vote_average", FloatType()),
-    StructField("vote_average", DecimalType(5, 1)),
+    StructField("vote_average", FloatType()),
     StructField("vote_count", IntegerType()),
     StructField("genre_names", ArrayType(StringType()))
 ])
+
 
 # Read data from Kafka :
 kafka_data = spark.readStream \
@@ -49,12 +48,16 @@ kafka_data = kafka_data.selectExpr("CAST(value AS STRING)")
 # Parse data to JSON :
 parsed_stream_df = kafka_data \
     .select(from_json(col("value"), schema).alias("data")) \
-    .select("data.*")
+    .select("data.*")\
+    .withColumn("release_date", date_format("release_date", "yyyy-MM-dd"))\
+    .withColumn("description", concat_ws(" ", col("title"), col("overview")))
+
+# Add colonne description :
+# parsed_stream_df = parsed_stream_df.withColumn("description", concat_ws(" ", col("title"), col("overview")))
 
 print("_"*40)
 print(parsed_stream_df)
 print("_"*40)
-
 
 parsed_stream_df.writeStream \
     .format("org.elasticsearch.spark.sql") \
