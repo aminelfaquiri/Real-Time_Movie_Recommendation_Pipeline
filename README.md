@@ -27,9 +27,11 @@ look in the pdf file in repo files.
 
 ## Creating a Kafka Topic :
 Initiate ZooKeeper by running: `_run ZooKeeper_`
+
 Launch the Kafka Server with the command: `_run Kafka Server_`
 
 Once the above steps are completed, I create a topic named "movies"
+
 `kafka-topics --bootstrap-server 127.0.0.1:9092 --topic movies --create --partitions 3 --replication-factor 1`
 
 ## Create a Kafka Producer :
