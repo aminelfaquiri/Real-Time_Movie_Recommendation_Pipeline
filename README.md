@@ -66,7 +66,7 @@ The processed data is then written to Elasticsearch. The writeStream operation i
 i use the simple logic is get with quiry dsl the movies have the at leas one vategory "genere" and the same vote avrange or greater than and have the same popularity or greater than .
 
 ## les difficultés rencontrées :
-* probleme the cofiguration 
-* 
+* probleme the cofiguration
+
 ## Conclusion :
 In conclusion, the Real-Time Movie Recommendation Pipeline successfully implements a robust system for collecting, processing, and delivering personalized movie recommendations in real-time. The project, encompassing Kafka, SparkStreaming, Elasticsearch, Flask API, and Kibana visualization
