@@ -4,7 +4,7 @@
 As a Data Developer, my task is to construct a real-time system that spans from collecting data from the movielens.org API to presenting recommendations to users. The project encompasses critical stages, with each step playing a pivotal role in the seamless functioning of the recommendation pipeline.
 
 ## Planification
-Outline the plan or roadmap for the project, including milestones and key tasks.
+![Planing](https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/14e81881-50fc-41bb-98f4-5d410b43c406)
 
 ## Requirements Expression
 1. **Kafka Configuration**:
@@ -56,16 +56,17 @@ The processed data is then written to Elasticsearch. The writeStream operation i
 <img width="960" alt="image" src="https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/5abc0b19-98c4-4149-8307-39bd12080297">
 
 ## Visualization with Kibana :
+![dashboard](https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/a44b1a3a-f8a6-4a85-a8e7-5702e21297fc)
 
 ## Creating the API Recommendation (Flask) :
-the get_movie_recommendations function acts as the core logic for handling movie recommendation requests. It interacts with Elasticsearch to retrieve information about the specified movie and formulates additional queries to find and extract relevant movie recommendations.
+![api_search](https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/9c98a5bd-9965-406e-9d68-ff35267f8b4b)
+![screencapture-127-0-0-1-5000-2023-11-16-15_20_28](https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/1018e595-660c-42ca-9649-799587c4d122)
 
 * **logic of my recomandation**
-i use the simple logic is the 
-
-<img width="390" alt="Capture d'écran 2023-11-14 225229" src="https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/327c0b70-0c64-42b2-a689-a44dc529de66">
+i use the simple logic is get with quiry dsl the movies have the at leas one vategory "genere" and the same vote avrange or greater than and have the same popularity or greater than .
 
 ## les difficultés rencontrées :
-* probleme the version between elasticsearch and spark and scala.
+* probleme the cofiguration 
+* 
 ## Conclusion :
-
+In conclusion, the Real-Time Movie Recommendation Pipeline successfully implements a robust system for collecting, processing, and delivering personalized movie recommendations in real-time. The project, encompassing Kafka, SparkStreaming, Elasticsearch, Flask API, and Kibana visualization
