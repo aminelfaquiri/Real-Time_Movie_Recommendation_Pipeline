@@ -53,7 +53,7 @@ The received data is deserialized and parsed into a structured format using the 
 
 9. **Write Stream to Elasticsearch:**
 The processed data is then written to Elasticsearch. The writeStream operation is used to append the data to the Elasticsearch index named "movies."
-<img width="960" alt="image" src="https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/5abc0b19-98c4-4149-8307-39bd12080297">
+<img width="420" alt="image" src="https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/3f947aab-ab2b-4d94-97eb-7b9205208921">
 
 ## Visualization with Kibana :
 ![dashboard](https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/a44b1a3a-f8a6-4a85-a8e7-5702e21297fc)
