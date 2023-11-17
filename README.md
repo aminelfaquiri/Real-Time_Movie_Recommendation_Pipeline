@@ -72,8 +72,10 @@ The processed data is then written to Elasticsearch. The writeStream operation i
 The logic of my recommendation system is based on a simple approach. I use a query DSL to retrieve movies that have at least one category (genre) and share the same or higher vote average, along with the same or greater popularity
 
 ## Challenges Faced :
+
 **Configuration Issue:**
 Facing a problem with the compatibility between Spark and Elasticsearch versions.
+
 **Solusion :**
 finely i foud the version correct for me is :
 * Spark : 3.2.4
