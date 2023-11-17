@@ -1,4 +1,4 @@
-# Real-Time_Movie_Recommendation_Pipeline
+# Real Time Movie Recommendation Pipeline
 
 ## Introduction
 As a Data Developer, my task is to construct a real-time system that spans from collecting data from the movielens.org API to presenting recommendations to users. The project encompasses critical stages, with each step playing a pivotal role in the seamless functioning of the recommendation pipeline.
