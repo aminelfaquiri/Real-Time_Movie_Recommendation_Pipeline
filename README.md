@@ -66,14 +66,19 @@ The processed data is then written to Elasticsearch. The writeStream operation i
 ![dashboard](https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/a44b1a3a-f8a6-4a85-a8e7-5702e21297fc)
 
 ## Creating the API Recommendation (Flask) :
-![api_search](https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/9c98a5bd-9965-406e-9d68-ff35267f8b4b)
 ![screencapture-127-0-0-1-5000-2023-11-16-15_20_28](https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/1018e595-660c-42ca-9649-799587c4d122)
 
 * **logic of my recomandation**
 The logic of my recommendation system is based on a simple approach. I use a query DSL to retrieve movies that have at least one category (genre) and share the same or higher vote average, along with the same or greater popularity
 
-## les difficultés rencontrées :
-* probleme the cofiguration
+## Challenges Faced :
+**Configuration Issue:**
+Facing a problem with the compatibility between Spark and Elasticsearch versions.
+**Solusion :**
+finely i foud the version correct for me is :
+* Spark : 3.2.4
+* Elasticseach : 8.11
+* Scala : 2.12.15
 
 ## Conclusion :
 In conclusion, the Real-Time Movie Recommendation Pipeline successfully implements a robust system for collecting, processing, and delivering personalized movie recommendations in real-time. The project, encompassing Kafka, SparkStreaming, Elasticsearch, Flask API, and Kibana visualization
