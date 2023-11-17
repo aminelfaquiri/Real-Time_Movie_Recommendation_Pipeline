@@ -70,7 +70,7 @@ The processed data is then written to Elasticsearch. The writeStream operation i
 ![screencapture-127-0-0-1-5000-2023-11-16-15_20_28](https://github.com/aminelfaquiri/Real-Time_Movie_Recommendation_Pipeline/assets/81482544/1018e595-660c-42ca-9649-799587c4d122)
 
 * **logic of my recomandation**
-I use the simple logic is get with quiry dsl the movies have the at leas one vategory "genere" and the same vote avrange or greater than and have the same popularity or greater than .
+The logic of my recommendation system is based on a simple approach. I use a query DSL to retrieve movies that have at least one category (genre) and share the same or higher vote average, along with the same or greater popularity
 
 ## les difficultés rencontrées :
 * probleme the cofiguration
