@@ -23,7 +23,54 @@ Programming a RESTful API, utilizing a framework like Flask, to interact with El
 Crafting dashboards in Kibana for visualizations that aid decision-making. Examples include visualizing movie release date distribution, top 10 popular movies, average ratings by genre, linguistic distribution of films, top 10 movies by votes, and the distribution of movie rankings.
 
 ## RGPD Compliance
-look in the pdf file in repo files.
+
+The Movie Recommendation System project integrates a robust data governance and privacy framework to ensure responsible handling of user data. This section provides insights into key practices and measures taken to comply with data protection regulations, specifically the General Data Protection Regulation (GDPR).
+
+### Data Governance
+
+1. **Transparency:**
+   - Maintain clear communication on data collection, processing, and storage practices.
+   - Users should be informed about the types of data collected and the intended purposes.
+
+2. **Lineage Tracking:**
+   - Implement comprehensive data lineage tracking from the source (themoviedb.org API) to Elasticsearch.
+   - This supports accountability and facilitates auditing procedures.
+
+3. **Metadata Inclusion:**
+   - Include relevant metadata, such as timestamps and calculated fields, to provide context during data analysis.
+
+### Privacy Compliance
+
+1. **Data Minimization:**
+   - Adhere to the principle of data minimization, collecting only essential information for movie recommendations.
+   - Avoid the inclusion of sensitive or personally identifiable information beyond project objectives.
+
+2. **Anonymization:**
+   - Anonymize or transform personal information (e.g., user IDs and preferences) during data processing.
+   - Ensure processed data cannot be traced back to individual users.
+
+3. **Consent:**
+   - Source data from themoviedb.org API, respecting their terms of service and usage policies.
+   - Implicitly consider user consent within the context of utilizing the movie recommendation service.
+
+4. **Data Security:**
+   - Implement stringent measures to secure data during transmission and storage.
+   - Restrict data access to authorized personnel only through effective access controls.
+
+5. **Data Retention:**
+   - Retain data for the minimum duration necessary to fulfill the movie recommendation system's objectives.
+   - Delete or anonymize data that is no longer needed to protect user privacy.
+
+6. **User Rights:**
+   - Affirm users' rights to request information about collected and processed data.
+   - Promptly address user requests for data removal or anonymization in compliance with privacy regulations.
+
+7. **Documentation:**
+   - Maintain detailed records of data processing activities, encompassing data types, processing purposes, and security measures.
+
+8. **Regular Data Cleansing:**
+   - Implement ongoing procedures for data cleansing to remove unnecessary or outdated data.
+   - Systematically cleanse personal data to uphold privacy standards.
 
 ## Creating a Kafka Topic :
 Initiate ZooKeeper by running: `_run ZooKeeper_`
